@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ─── SEO ─── -->
+  <title>Projects — Alex Morgan | Frontend Developer</title>
+  <meta name="description" content="Explore Alex Morgan's portfolio of accessible, high-performance web projects — from e-commerce platforms to AI-powered tools." />
+  <meta name="keywords" content="web projects, portfolio, React, Next.js, frontend, accessible apps, GitHub" />
+  <meta name="author" content="Alex Morgan" />
+  <link rel="canonical" href="https://alexmorgan.dev/projects.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://alexmorgan.dev/projects.html" />
+  <meta property="og:title"       content="Projects — Alex Morgan" />
+  <meta property="og:description" content="A curated collection of accessible, performant web applications." />
+  <meta property="og:image"       content="https://alexmorgan.dev/images/og-cover.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Projects — Alex Morgan" />
+  <meta name="twitter:description" content="A curated collection of accessible, performant web applications." />
+  <meta name="twitter:image"       content="https://alexmorgan.dev/images/og-cover.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* Filter bar */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-bottom: 2.5rem;
+      justify-content: center;
+    }
+    .filter-btn {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-pill);
+      padding: .4em 1.1em;
+      font-size: .85rem;
+      font-weight: 600;
+      font-family: var(--font-body);
+      color: var(--color-text-muted);
+      cursor: pointer;
+      transition: border-color var(--transition-fast), color var(--transition-fast), background-color var(--transition-fast);
+    }
+    .filter-btn:hover,
+    .filter-btn[aria-pressed="true"] {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+      background-color: var(--color-accent-glow);
+    }
+
+    /* Status badge */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      font-weight: 600;
+      padding: .2em .65em;
+      border-radius: var(--radius-pill);
+    }
+    .status-badge--live {
+      background: rgba(76,175,130,.15);
+      color: #4caf82;
+      border: 1px solid rgba(76,175,130,.3);
+    }
+    .status-badge--wip {
+      background: rgba(245,166,35,.12);
+      color: var(--color-accent);
+      border: 1px solid rgba(245,166,35,.3);
+    }
+    .status-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="nav-logo" href="index.html" aria-label="Alex Morgan – Home">Alex<span>.</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list" role="list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="projects.html" aria-current="page">Projects</a></li>
+          <li><a class="nav-link" href="skills.html">Skills</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode" title="Toggle colour theme">☀️</button>
+          <a class="btn btn--primary btn--sm" href="contact.html">Hire Me</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <div class="page-hero" role="region" aria-label="Page title">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <ol class="page-hero__breadcrumb" role="list">
+            <li><a href="index.html">Home</a> /</li>
+            <li aria-current="page">Projects</li>
+          </ol>
+        </nav>
+        <h1>My Projects</h1>
+        <p class="section__subtitle">Hand-picked work I'm proud of — built for performance, accessibility, and real users.</p>
+      </div>
+    </div>
+
+    <!-- ══ ALL PROJECTS ══ -->
+    <section class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 class="visually-hidden" id="projects-heading">All projects</h2>
+
+        <!-- Filter buttons -->
+        <div class="filter-bar" role="group" aria-label="Filter projects by technology">
+          <button class="filter-btn" aria-pressed="true"  data-filter="all">All</button>
+          <button class="filter-btn" aria-pressed="false" data-filter="react">React</button>
+          <button class="filter-btn" aria-pressed="false" data-filter="nextjs">Next.js</button>
+          <button class="filter-btn" aria-pressed="false" data-filter="vue">Vue</button>
+          <button class="filter-btn" aria-pressed="false" data-filter="node">Node.js</button>
+        </div>
+
+        <!-- Projects grid -->
+        <div class="projects-grid" id="projects-grid" aria-live="polite" aria-atomic="true">
+
+          <!-- Project 1 -->
+          <article class="project-card animate-fade-up animate-delay-1" data-tags="react node">
+            <header>
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:.5rem;">
+                <div class="project-card__icon" aria-hidden="true">🛒</div>
+                <span class="status-badge status-badge--live" aria-label="Status: Live">
+                  <span class="status-dot" aria-hidden="true"></span>Live
+                </span>
+              </div>
+              <h3 class="project-card__title">ShopSmart E-Commerce</h3>
+            </header>
+            <p class="project-card__description">
+              A fully accessible e-commerce platform with real-time inventory, Stripe payments,
+              and server-side rendering. Achieves 100 Lighthouse score across all metrics.
+            </p>
+            <ul class="project-card__tags" aria-label="Technologies used">
+              <li><span class="tag">React</span></li>
+              <li><span class="tag">Node.js</span></li>
+              <li><span class="tag">PostgreSQL</span></li>
+              <li><span class="tag">Stripe</span></li>
+            </ul>
+            <div class="project-card__actions">
+              <a class="btn btn--outline btn--sm" href="https://github.com/alexmorgan/shopsmart"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="ShopSmart source code on GitHub (opens in new tab)">
+                ↗ GitHub
+              </a>
+              <a class="btn btn--primary btn--sm" href="https://shopsmart.demo.com"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="ShopSmart live demo (opens in new tab)">
+                Live Demo
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card animate-fade-up animate-delay-2" data-tags="react node">
+            <header>
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:.5rem;">
+                <div class="project-card__icon" aria-hidden="true">📊</div>
+                <span class="status-badge status-badge--live" aria-label="Status: Live">
+                  <span class="status-dot" aria-hidden="true"></span>Live
+                </span>
+              </div>
+              <h3 class="project-card__title">DataViz Dashboard</h3>
+            </header>
+            <p class="project-card__description">
+              Interactive analytics dashboard with D3.js charts, real-time WebSocket data,
+              and full keyboard navigation. Supports ARIA live regions for screen readers.
+            </p>
+            <ul class="project-card__tags" aria-label="Technologies used">
+              <li><span class="tag">D3.js</span></li>
+              <li><span class="tag">TypeScript</span></li>
+              <li><span class="tag">WebSockets</span></li>
+              <li><span class="tag">React</span></li>
+            </ul>
+            <div class="project-card__actions">
+              <a class="btn btn--outline btn--sm" href="https://github.com/alexmorgan/dataviz"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="DataViz Dashboard source code on GitHub (opens in new tab)">
+                ↗ GitHub
+              </a>
+              <a class="btn btn--primary btn--sm" href="https://dataviz.demo.com"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="DataViz Dashboard live demo (opens in new tab)">
+                Live Demo
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card animate-fade-up animate-delay-3" data-tags="nextjs">
+            <header>
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:.5rem;">
+                <div class="project-card__icon" aria-hidden="true">🤖</div>
+                <span class="status-badge status-badge--live" aria-label="Status: Live">
+                  <span class="status-dot" aria-hidden="true"></span>Live
+                </span>
+              </div>
+              <h3 class="project-card__title">AI Content Studio</h3>
+            </header>
+            <p class="project-card__description">
+              Content generation SaaS leveraging OpenAI's API with role-based access control,
+              usage metering, and an accessible editor built on ProseMirror.
+            </p>
+            <ul class="project-card__tags" aria-label="Technologies used">
+              <li><span class="tag">Next.js</span></li>
+              <li><span class="tag">OpenAI API</span></li>
+              <li><span class="tag">Prisma</span></li>
+            </ul>
+            <div class="project-card__actions">
+              <a class="btn btn--outline btn--sm" href="https://github.com/alexmorgan/ai-studio"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="AI Content Studio source code on GitHub (opens in new tab)">
+                ↗ GitHub
+              </a>
+              <a class="btn btn--primary btn--sm" href="https://aistudio.demo.com"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="AI Content Studio live demo (opens in new tab)">
+                Live Demo
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card animate-fade-up" data-tags="vue node">
+            <header>
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:.5rem;">
+                <div class="project-card__icon" aria-hidden="true">🏥</div>
+                <span class="status-badge status-badge--live" aria-label="Status: Live">
+                  <span class="status-dot" aria-hidden="true"></span>Live
+                </span>
+              </div>
+              <h3 class="project-card__title">MediTrack Patient Portal</h3>
+            </header>
+            <p class="project-card__description">
+              HIPAA-compliant patient portal built with Vue 3 and a secure Node.js backend.
+              Full WCAG AA compliance with high-contrast mode and screen-reader optimisation.
+            </p>
+            <ul class="project-card__tags" aria-label="Technologies used">
+              <li><span class="tag">Vue 3</span></li>
+              <li><span class="tag">Node.js</span></li>
+              <li><span class="tag">MongoDB</span></li>
+            </ul>
+            <div class="project-card__actions">
+              <a class="btn btn--outline btn--sm" href="https://github.com/alexmorgan/meditrack"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="MediTrack source code on GitHub (opens in new tab)">
+                ↗ GitHub
+              </a>
+              <a class="btn btn--primary btn--sm" href="https://meditrack.demo.com"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="MediTrack live demo (opens in new tab)">
+                Live Demo
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card animate-fade-up" data-tags="nextjs node">
+            <header>
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:.5rem;">
+                <div class="project-card__icon" aria-hidden="true">📝</div>
+                <span class="status-badge status-badge--wip" aria-label="Status: Work in progress">
+                  <span class="status-dot" aria-hidden="true"></span>WIP
+                </span>
+              </div>
+              <h3 class="project-card__title">Notely — Smart Notes App</h3>
+            </header>
+            <p class="project-card__description">
+              A Notion-inspired note-taking app with AI-powered summarisation, tag-based
+              organisation, and offline support via IndexedDB.
+            </p>
+            <ul class="project-card__tags" aria-label="Technologies used">
+              <li><span class="tag">Next.js</span></li>
+              <li><span class="tag">tRPC</span></li>
+              <li><span class="tag">IndexedDB</span></li>
+            </ul>
+            <div class="project-card__actions">
+              <a class="btn btn--outline btn--sm" href="https://github.com/alexmorgan/notely"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Notely source code on GitHub (opens in new tab)">
+                ↗ GitHub
+              </a>
+              <span class="btn btn--sm" style="opacity:.5; cursor:not-allowed;" aria-disabled="true">Coming Soon</span>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card animate-fade-up" data-tags="react">
+            <header>
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:.5rem;">
+                <div class="project-card__icon" aria-hidden="true">🎨</div>
+                <span class="status-badge status-badge--live" aria-label="Status: Live">
+                  <span class="status-dot" aria-hidden="true"></span>Live
+                </span>
+              </div>
+              <h3 class="project-card__title">Palette — Design Token Manager</h3>
+            </header>
+            <p class="project-card__description">
+              Visual tool for managing design tokens across multi-brand design systems.
+              Exports to CSS custom properties, SCSS, and JSON. Open source.
+            </p>
+            <ul class="project-card__tags" aria-label="Technologies used">
+              <li><span class="tag">React</span></li>
+              <li><span class="tag">Vite</span></li>
+              <li><span class="tag">CSS Houdini</span></li>
+            </ul>
+            <div class="project-card__actions">
+              <a class="btn btn--outline btn--sm" href="https://github.com/alexmorgan/palette"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Palette source code on GitHub (opens in new tab)">
+                ↗ GitHub
+              </a>
+              <a class="btn btn--primary btn--sm" href="https://palette.demo.com"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Palette live demo (opens in new tab)">
+                Live Demo
+              </a>
+            </div>
+          </article>
+
+        </div><!-- /projects-grid -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <a class="footer-brand" href="index.html" aria-label="Alex Morgan – Back to home">Alex<span>.</span></a>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-nav" role="list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <p class="footer-copy"><small>&copy; <span id="year"></span> Alex Morgan. All rights reserved.</small></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/script.js"></script>
+  <script>
+    /* ─── Project filter logic ─── */
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards      = document.querySelectorAll('#projects-grid .project-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        // Update aria-pressed
+        filterBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
+        btn.setAttribute('aria-pressed', 'true');
+
+        // Show/hide cards
+        cards.forEach(card => {
+          const tags = card.dataset.tags || '';
+          const show = filter === 'all' || tags.includes(filter);
+          card.style.display = show ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

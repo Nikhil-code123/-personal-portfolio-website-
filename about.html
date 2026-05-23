@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ─── SEO Meta Tags ─── -->
+  <title>About — Alex Morgan | Frontend Developer</title>
+  <meta name="description" content="Learn more about Alex Morgan — a senior frontend developer with 5+ years of experience building accessible and performant web applications." />
+  <meta name="keywords" content="about Alex Morgan, frontend developer, web designer, experience, education, resume" />
+  <meta name="author" content="Alex Morgan" />
+  <link rel="canonical" href="https://alexmorgan.dev/about.html" />
+
+  <!-- ─── Open Graph ─── -->
+  <meta property="og:type"        content="profile" />
+  <meta property="og:url"         content="https://alexmorgan.dev/about.html" />
+  <meta property="og:title"       content="About Alex Morgan — Frontend Developer" />
+  <meta property="og:description" content="5+ years building accessible, high-performance web applications." />
+  <meta property="og:image"       content="https://alexmorgan.dev/images/og-cover.png" />
+
+  <!-- ─── Twitter Card ─── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="About Alex Morgan — Frontend Developer" />
+  <meta name="twitter:description" content="5+ years building accessible, high-performance web applications." />
+  <meta name="twitter:image"       content="https://alexmorgan.dev/images/og-cover.png" />
+
+  <!-- ─── Fonts ─── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ─── Skip Link ─── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ─── HEADER ─── -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a class="nav-logo" href="index.html" aria-label="Alex Morgan – Home">Alex<span>.</span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list" role="list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html" aria-current="page">About</a></li>
+          <li><a class="nav-link" href="projects.html">Projects</a></li>
+          <li><a class="nav-link" href="skills.html">Skills</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode" title="Toggle colour theme">☀️</button>
+          <a class="btn btn--primary btn--sm" href="contact.html">Hire Me</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ─── MAIN ─── -->
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <div class="page-hero" role="region" aria-label="Page title">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <ol class="page-hero__breadcrumb" role="list">
+            <li><a href="index.html">Home</a> /</li>
+            <li aria-current="page">About</li>
+          </ol>
+        </nav>
+        <h1>About Me</h1>
+        <p class="section__subtitle">Designer. Developer. Accessibility advocate.</p>
+      </div>
+    </div>
+
+    <!-- ══ BIO SECTION ══ -->
+    <section class="section" aria-labelledby="bio-heading">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Photo column -->
+          <aside aria-label="Profile photo">
+            <div class="about-photo-wrap">
+              <figure>
+                <div class="about-photo" role="img" aria-label="Profile photo placeholder — replace with your photo">
+                  <svg width="72" height="72" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="opacity:0.3; color: var(--color-text-muted)">
+                    <circle cx="40" cy="30" r="18" stroke="currentColor" stroke-width="2"/>
+                    <path d="M8 72c0-17.673 14.327-32 32-32s32 14.327 32 32" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <figcaption class="visually-hidden">Alex Morgan, Senior Frontend Developer</figcaption>
+              </figure>
+
+              <!-- Quick info card -->
+              <aside class="contact-form" style="margin-top: 1.5rem; padding: 1.5rem;" aria-label="Quick contact info">
+                <h2 style="font-size:1rem; margin-bottom:1rem; font-family: var(--font-mono); letter-spacing:0.06em; text-transform:uppercase; color:var(--color-accent);">Quick Info</h2>
+                <dl>
+                  <div style="display:flex; gap:.5rem; margin-bottom:.75rem; font-size:.88rem;">
+                    <dt style="color:var(--color-text-muted); min-width:80px;">Location</dt>
+                    <dd>San Francisco, CA</dd>
+                  </div>
+                  <div style="display:flex; gap:.5rem; margin-bottom:.75rem; font-size:.88rem;">
+                    <dt style="color:var(--color-text-muted); min-width:80px;">Email</dt>
+                    <dd><a href="mailto:hello@alexmorgan.dev" style="color:var(--color-accent);">hello@alexmorgan.dev</a></dd>
+                  </div>
+                  <div style="display:flex; gap:.5rem; margin-bottom:.75rem; font-size:.88rem;">
+                    <dt style="color:var(--color-text-muted); min-width:80px;">Available</dt>
+                    <dd><span class="badge">Open to work</span></dd>
+                  </div>
+                  <div style="display:flex; gap:.5rem; font-size:.88rem;">
+                    <dt style="color:var(--color-text-muted); min-width:80px;">Languages</dt>
+                    <dd>English, Spanish</dd>
+                  </div>
+                </dl>
+              </aside>
+            </div>
+          </aside>
+
+          <!-- Text column -->
+          <div>
+            <section class="about-bio" aria-labelledby="bio-heading">
+              <span class="section__eyebrow">Who I Am</span>
+              <h2 id="bio-heading">Passionate About Building<br>For Everyone</h2>
+              <p>
+                I'm Alex Morgan, a Senior Frontend Developer and UI Designer based in San Francisco.
+                With over 5 years of professional experience, I've helped startups and Fortune 500
+                companies ship products that are fast, accessible, and genuinely delightful to use.
+              </p>
+              <p>
+                My philosophy is simple: great software is software that works for <em>everyone</em>.
+                That means pixel-perfect design, rock-solid performance, and — most importantly —
+                full WCAG 2.1 accessibility compliance so no user is left behind.
+              </p>
+              <p>
+                When I'm not coding, you'll find me contributing to open-source projects,
+                writing on my technical blog, or speaking at local web developer meetups about
+                the intersection of design and accessibility.
+              </p>
+
+              <div style="margin-top: 1.5rem;">
+                <a class="btn btn--primary" id="resume" href="images/alex-morgan-resume.pdf"
+                   download aria-label="Download Alex Morgan's resume as PDF">
+                  ⬇ Download Resume
+                </a>
+              </div>
+            </section>
+
+            <hr class="divider" />
+
+            <!-- ══ EXPERIENCE TIMELINE ══ -->
+            <section aria-labelledby="experience-heading">
+              <span class="section__eyebrow">Career</span>
+              <h2 id="experience-heading" style="margin-bottom:1.5rem;">Work Experience</h2>
+
+              <ol class="timeline" aria-label="Work experience timeline">
+
+                <li class="timeline__item">
+                  <p class="timeline__period"><time datetime="2022">2022</time> – Present</p>
+                  <h3 class="timeline__title">Senior Frontend Developer</h3>
+                  <p class="timeline__org">Acme Corp — San Francisco, CA</p>
+                  <p class="timeline__description">
+                    Led a team of 4 engineers to rebuild the core product UI in React, reducing
+                    load time by 60% and achieving a 100 Lighthouse accessibility score. Mentored
+                    junior developers and established front-end best practice standards.
+                  </p>
+                </li>
+
+                <li class="timeline__item">
+                  <p class="timeline__period"><time datetime="2020">2020</time> – <time datetime="2022">2022</time></p>
+                  <h3 class="timeline__title">Frontend Developer</h3>
+                  <p class="timeline__org">BrightLabs — Remote</p>
+                  <p class="timeline__description">
+                    Developed and maintained 12 client projects using Vue.js and TypeScript.
+                    Introduced automated accessibility testing with axe-core, cutting a11y
+                    violations by 90% across the board.
+                  </p>
+                </li>
+
+                <li class="timeline__item">
+                  <p class="timeline__period"><time datetime="2019">2019</time> – <time datetime="2020">2020</time></p>
+                  <h3 class="timeline__title">Junior UI Developer</h3>
+                  <p class="timeline__org">PixelForge Studio — Austin, TX</p>
+                  <p class="timeline__description">
+                    Built responsive landing pages and marketing sites for SaaS clients.
+                    Worked closely with designers to translate Figma mockups into pixel-perfect,
+                    standards-compliant HTML/CSS.
+                  </p>
+                </li>
+
+              </ol>
+            </section>
+
+            <hr class="divider" />
+
+            <!-- ══ EDUCATION TIMELINE ══ -->
+            <section aria-labelledby="education-heading">
+              <span class="section__eyebrow">Academic</span>
+              <h2 id="education-heading" style="margin-bottom:1.5rem;">Education</h2>
+
+              <ol class="timeline" aria-label="Education timeline">
+
+                <li class="timeline__item">
+                  <p class="timeline__period"><time datetime="2015">2015</time> – <time datetime="2019">2019</time></p>
+                  <h3 class="timeline__title">B.Sc. Computer Science</h3>
+                  <p class="timeline__org">University of California, Berkeley</p>
+                  <p class="timeline__description">
+                    Specialisation in Human–Computer Interaction. Graduated with honours (GPA 3.9).
+                    Final thesis: "Automated Detection of Accessibility Barriers in Single-Page Applications."
+                  </p>
+                </li>
+
+                <li class="timeline__item">
+                  <p class="timeline__period"><time datetime="2018">2018</time></p>
+                  <h3 class="timeline__title">UX Design Bootcamp</h3>
+                  <p class="timeline__org">DesignLab — Online</p>
+                  <p class="timeline__description">
+                    Intensive 16-week programme covering user research, wireframing,
+                    prototyping, and usability testing.
+                  </p>
+                </li>
+
+              </ol>
+            </section>
+
+          </div><!-- /text column -->
+        </div><!-- /about-grid -->
+      </div>
+    </section>
+
+    <!-- ══ ACHIEVEMENTS ══ -->
+    <section class="section section--alt" aria-labelledby="achievements-heading">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__eyebrow">Milestones</span>
+          <h2 id="achievements-heading" class="section__title">Key Achievements</h2>
+        </header>
+        <div class="achievements-grid">
+          <article class="achievement-card animate-fade-up animate-delay-1">
+            <p class="achievement-card__number" aria-label="5 plus years">5+</p>
+            <p class="achievement-card__label">Years of Experience</p>
+          </article>
+          <article class="achievement-card animate-fade-up animate-delay-2">
+            <p class="achievement-card__number" aria-label="40 plus projects">40+</p>
+            <p class="achievement-card__label">Projects Shipped</p>
+          </article>
+          <article class="achievement-card animate-fade-up animate-delay-3">
+            <p class="achievement-card__number" aria-label="30 plus clients">30+</p>
+            <p class="achievement-card__label">Satisfied Clients</p>
+          </article>
+          <article class="achievement-card animate-fade-up animate-delay-4">
+            <p class="achievement-card__number" aria-label="8 open-source contributions">8</p>
+            <p class="achievement-card__label">Open-Source Packages</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <a class="footer-brand" href="index.html" aria-label="Alex Morgan – Back to home">Alex<span>.</span></a>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-nav" role="list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <p class="footer-copy"><small>&copy; <span id="year"></span> Alex Morgan. All rights reserved.</small></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/script.js"></script>
+</body>
+</html>
